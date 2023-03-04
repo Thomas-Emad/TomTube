@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500&display=swap");
+/* Start Code Login, Register Page */
+:root {
+  --trans: 0.4s;
+}
+body {
+  background-color: #2f3640;
+  font-family: "Cairo", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+.parent {
+  background-color: #1e272e;
+  padding: 20px 15px;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  box-shadow: 7px 7px 17px rgb(22 20 20);
+}
+@media (max-width: 400px) {
+  .parent {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+}
+.parent .title {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+.parent form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.parent form input {
+  padding: 10px 15px;
+  border-radius: 100px;
+  background-color: transparent;
+  border: solid #00a8ff 3px;
+  width: 80%;
+  outline: none;
+  transition: var(--trans);
+  color: #fff;
+}
+.parent form input:hover,
+.parent form input:focus {
+  width: 90%;
+  box-shadow: 1px 1px 6px #00a8ff;
+}
+.parent form input[type="submit"] {
+  border: solid #44bd32 3px;
+  width: 60%;
+  cursor: pointer;
+  font-weight: bold;
+}
+.parent form input[type="submit"]:hover {
+  width: 80%;
+  background-color: #44bd32;
+  box-shadow: 1px 1px 6px #00a8ff;
+}
+.parent form .trans_page {
+  padding: 3px 0;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: transparent;
+  border: solid rgb(155, 155, 155) 3px;
+  width: 40%;
+  transition: var(--trans);
+  color: rgb(155, 155, 155);
+  text-align: center;
+  text-decoration: none;
+}
+.parent form .trans_page:hover {
+  color: #fff;
+  border: solid #fff 3px;
+  width: 60%;
+}
+
+.parent .error {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 5px 0 0 0;
+}
+
+.trans_page_text {
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.trans_page_text:hover {
+  opacity: 1;
+}

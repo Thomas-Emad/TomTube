@@ -1,0 +1,136 @@
+body {
+  background-color: #99999987;
+  color: #000;
+}
+:root {
+  --b-r: 10px;
+  --trans-3s: 0.3s;
+  --bg-color: #ffffff7d;
+  --bg-white: #fff;
+  --bg-c5: #c5c5c5;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-c5);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-white);
+  border-radius: var(--b-r);
+}
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+/* Start Header */
+header nav {
+  background-color: var(--bg-white);
+  border-radius: var(--b-r);
+  width: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5px;
+}
+header nav .img_profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+header nav ul {
+  gap: 5px;
+}
+header nav ul li {
+  display: flex;
+  align-items: center;
+  transition: var(--trans-3s);
+}
+header nav ul li:hover {
+  opacity: 0.6;
+}
+form input[name="mode"] {
+  background-color: transparent;
+  outline: none;
+  border: solid 1px #0d6efd;
+  border-radius: var(--b-r);
+  padding: 5px 15px;
+  transition: var(--trans-3s);
+  color: inherit;
+}
+form input[name="mode"]:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+@media (max-width: 970px) {
+  header nav ul li {
+    gap: 7px;
+  }
+  header nav form {
+    margin-bottom: 15px;
+  }
+}
+
+/* Start Content */
+.content {
+  background-color: var(--bg-color);
+  position: relative;
+  border-radius: var(--b-r);
+  width: 98%;
+  height: 87vh;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  margin: 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  overflow-x: auto;
+}
+.content .box {
+  background-color: var(--bg-c5);
+  border-radius: var(--b-r);
+  height: fit-content;
+  padding: 0;
+}
+.content .box .img-video {
+  width: 100%;
+  border-radius: var(--b-r);
+  height: 200px;
+}
+.content .box .info {
+  padding: 5px;
+}
+.content .box .info .title {
+  margin: 0;
+  font-weight: bold;
+}
+.content .box .info .info_ch {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #999;
+  gap: 4px;
+}
+.content .box .info .info_ch img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+.content .box .info .info_ch .title_ch {
+  display: flex;
+  flex-direction: column;
+}
+.text_color {
+  color: #444;
+  font-size: 0.8rem;
+}
+
+.v_email {
+  /* position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

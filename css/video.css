@@ -1,0 +1,171 @@
+/* Start Content */
+.content_v {
+  background-color: var(--bg-color);
+  position: relative;
+  border-radius: var(--b-r);
+  width: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content_v .watch {
+  background-color: var(--bg-color);
+  width: 100%;
+  border-radius: var(--b-r);
+  padding-bottom: 5px;
+}
+.content_v .watch .vid {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.content_v .watch .vid .v_w {
+  width: 100%;
+  border-radius: var(--b-r);
+}
+.content_v .watch .vid .info,
+.content_v .watch .dis,
+.content_v .watch .comm {
+  background-color: var(--bg-c5);
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: var(--b-r);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+}
+.content_v .watch .vid .info .vid_info .data {
+  font-size: 0.9rem;
+}
+.content_v .watch .vid .info .vid_info .name_vid {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.content_v .img_profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+.content_v .watch .dis {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: rgb(243, 243, 243);
+  line-height: 1rem;
+}
+.content_v .add_commit {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  gap: 10px;
+}
+.content_v .add_commit input {
+  outline: none;
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--b-r);
+  background-color: var(--bg-color);
+  width: 25%;
+  color: #fff !important;
+}
+.content_v .add_commit input[type="text"] {
+  width: 80%;
+}
+.content_v .comm {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 3px;
+  background-color: #333;
+  border-radius: var(--b-r);
+  gap: 10px;
+  color: inherit;
+}
+.content_v .comm .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  padding-right: 10px;
+  gap: 5px;
+  background-color: var(--bg-color);
+  border-radius: var(--b-r);
+  width: 100%;
+  line-height: 1.1rem;
+}
+.content_v .comm .info_commit {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.content_v .comm .info_commit p {
+  margin: 0;
+}
+.content_v .comm .info_commit img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+.content_v .comm .info_commit .commit {
+  width: 100%;
+}
+.content_v .comm .info_commit .name_channle,
+span.time {
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+@media (max-width: 767px) {
+  .content_v {
+    flex-direction: column;
+  }
+  .content_v .others {
+    width: 100%;
+  }
+}
+.content_v form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.content_v form input {
+  outline: none;
+  border: none;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  color: inherit;
+  padding: 10px 15px;
+  width: 80%;
+  transition: var(--trans-3s);
+}
+.content_v form input:hover {
+  box-shadow: 0 0 5px 1px #a7a7a7;
+}
+.content_v form input[type="submit"] {
+  width: 20%;
+}
+.content_v form input[type="submit"]:hover {
+  background-color: green;
+}
+.content_v form .del_commit .input_del {
+  display: none;
+}
+.content_v form .del_commit .lable_del {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: solid 1px #d63384;
+  background-color: #d63384;
+  color: #fff;
+  border-radius: var(--b-r);
+  transition: var(--trans-3s);
+  opacity: 0.5;
+}
+.content_v form .del_commit .lable_del:hover {
+  opacity: 1;
+}
