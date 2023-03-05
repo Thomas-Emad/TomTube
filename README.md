@@ -23,7 +23,7 @@ You can upload videos that you can view, you can search in the search box under 
 #### It's Have One Problem 😢:-
  1- You cannot upload a video larger than 5MB, because the server is weak, so I tried on Localhost, and it was normally uploading higher than this 😧.
 
-Which I used:-
+#### Which I used:-
 1- HTML, CSS, Bootstrap.
 2- PHP, MySQL, Phpmyadmin.
 3- phpmailer: To confirm the email, and I forgot the password.
