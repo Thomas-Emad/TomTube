@@ -28,3 +28,4 @@ You can upload videos that you can view, you can search in the search box under 
 2- PHP, MySQL, Phpmyadmin.
 3- phpmailer: To confirm the email, and I forgot the password.
 
+![img](Active email page.jpeg)
