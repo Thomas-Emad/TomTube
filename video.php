@@ -133,9 +133,9 @@ $que = mysqli_query($db, "UPDATE `videos` SET `watch` = '$watchs' WHERE url_vide
         if (isset($_POST['add_commit'])) {
 
           if (isset($username) && $username != '') {
-            $commit = $_POST['commit'];
+            $commit = str_replace("'", "", filter_var($_POST['commit'], FILTER_SANITIZE_EMAIL));
             $add_commit = $reslut  . 'nucm=?' . $username . 'cm=?' . $commit . '<br><span class="time">' . date('Y/m/d h-i') . '</span>';
-            mysqli_query($db, "UPDATE `videos` SET comm = '$add_commit' WHERE url_video = '$url_video';");
+            mysqli_query($db, "UPDATE videos SET comm = '$add_commit' WHERE url_video = '$url_video';");
             header("Refresh: 0");
           } else {
             echo '<script>window.alert("Can\'t Send Your Message, You Need To Login First.")</script>';

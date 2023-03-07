@@ -40,9 +40,9 @@ if ($url_site == 'login') {
   }
 } elseif ($url_site == 'register') {
   if (isset($_POST['submit'])) {
-    $name_channle = $_POST['name_channle'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $name_channle = str_replace("'", "", filter_var($_POST['name_channle'], FILTER_SANITIZE_EMAIL));
+    $email =  filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $password =  filter_var($_POST['password'], FILTER_SANITIZE_EMAIL);
     $time_create = $_POST['time_create'];
 
     $errors = [];

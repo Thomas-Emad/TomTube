@@ -85,8 +85,9 @@ if (isset($_POST['upload_video'])) {
   $type_allow_img =  ['png', 'jpg', 'jpeg', 'webp'];
   $type_allow_video =  ['mp4', 'm4p', 'm4v'];
 
-  $title_video = $_POST['title_video'];
-  $dec_video = $_POST['dec_video'];
+
+  $title_video = str_replace("'", "", filter_var($_POST['title_video'], FILTER_SANITIZE_EMAIL));
+  $dec_video = str_replace("'", "", filter_var($_POST['dec_video'], FILTER_SANITIZE_EMAIL));
   $url_video_random = rand(5000, 1000000);
 
   if (strlen($title_video) == 0) {
@@ -112,6 +113,10 @@ if (isset($_POST['upload_video'])) {
   } else {
     $errors[] = "Cant Upload Empty (Image)";
   }
+  if (($_FILES['video']['size'] / (1024 * 1024)) > 41) {
+    $errors[] = "Cant Upload, Because Video IS So Big, Should Lower 41MG.";
+  }
+
   // IF Don't Have Any Errors Upload Video.
   if (empty($errors)) {
     // Upload Background And Video.
